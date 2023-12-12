@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    position: relative;
+}
+
+.container {
+
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock {
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+.container::before {
+    content:'';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+.container::after {
+    content:'';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+}
+.hero #disp{
+    height: 10hv;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    line-height: 40hv;
+    padding-top: 10%
+    
+}
+
+.clock form{
+    height: 35vh;
+    width: 100%;
+    line-height: 45vh;
+    text-align: center;
+    
+}
+.clock form input{
+    width: 130px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #8e44ad;
+    color: #8e44ad;
+    background-color: transparent;
+    font-size: 50px;
+    text-align: center;
+
+}
+.clock form input::placeholder{
+    font-size: 20px;
+    color: #8e44ad;
+    font-size: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn{
+    height: 15hv;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.btnsrt {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnsrt:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .btnsrt {
+    padding: 10px 30px;
+  }
+}
+
+
+.btnreset {
+  align-items: center;
+  background-color: #d84a37;
+  border: 2px solid #111111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #f8f8f8;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnreset:after {
+  background-color: #45a5bd;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.btnreset:hover:after {
+  transform: translate(0, 0);
+}
+
+.btnreset:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.btnreset:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btnreset {
+    padding: 0 40px;
+  }
+}
+
